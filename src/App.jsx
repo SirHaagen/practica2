@@ -1,12 +1,12 @@
 
-import Referencias from "./components/Referencias"
+import { BrowserRouter } from 'react-router-dom';
 
 const App = () => {
 
   return (    
-    <>
-    <Referencias/>
-    </>
+    <BrowserRouter>
+      <NavBar />
+    </BrowserRouter>
   )
 }
 
