@@ -9,8 +9,8 @@ import { Account } from "../components/Account"
 export const NavDesktop= ()=>{
 
   return(<>
-    <nav>
-      <ul>
+    <nav className="main__navDesktop">
+      <ul className="main__navDesktop--links">
         <li><FiHome /><Link to="/">Home</Link></li>
         <li><FiSettings /><Link to="/Settings">Settings</Link></li>
         <li><FiPlusSquare /><Link to="/Create">Create</Link></li>

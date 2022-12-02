@@ -4,9 +4,11 @@ import { NavBar } from './components/NavBar';
 
 const App = () => {
 
-  return (    
+  return (
     <BrowserRouter>
-      <NavBar />
+      <div className="main">
+        <NavBar />
+      </div>
     </BrowserRouter>
   )
 }

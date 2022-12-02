@@ -1,0 +1,30 @@
+
+.main {
+
+  &__navDesktop {
+    width: 100%;
+    padding: 10px;
+    background-color: #a7a7a7;
+    position: fixed;
+    bottom: 0;
+
+    &--links {
+      display: flex;
+      justify-content: space-between;
+
+      li {
+        display: flex;
+        text-decoration: none;
+        align-items: center;
+      }
+      li >*{
+        color: #ffffff;
+      }
+
+      li a {
+        padding: 0 5px;
+        font-size: 0.8em;
+      }
+    }
+  }
+}
