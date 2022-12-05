@@ -1,0 +1,75 @@
+.main {
+
+  &__navMobile {
+    width: 100%;
+    padding: 10px;
+    background-color: #a7a7a7;
+    position: fixed;
+    bottom: 0;
+    opacity: 1;
+    overflow: visible;
+
+    &--links {
+      display: flex;
+      justify-content: space-between;
+
+      li {
+        display: flex;
+        text-decoration: none;
+        align-items: center;
+      }
+
+      li>* {
+        color: #ffffff;
+      }
+
+      li a {
+        padding: 0 5px;
+        font-size: clamp(10px, 5px + 2vw, 15px);
+      }
+    }
+
+    @media screen and (min-width: 600px) {
+      width: 0;
+      opacity: 0;
+      overflow: hidden;
+    }
+  }
+
+  &__navDesktop {
+    width: 0;
+    height: 0;
+    opacity: 0;
+    overflow: hidden;
+
+    @media screen and (min-width: 600px) {
+      width: auto;
+      height: 100vh;
+      padding: 40px 10px;
+      background-color: #a7a7a7;
+      position: relative;
+      opacity: 1;
+      overflow: visible;
+      transition: 0.5s linear;
+
+      &--links {
+
+        li a {
+          text-decoration: none;
+          color: #ffffff;
+          display: flex;
+          align-items: center;
+        }
+        li a>*{
+          margin: 10px;
+        }
+
+      }
+    }
+
+  }
+
+  @media screen and (min-width: 600px) {
+    display: flex;
+  }
+}

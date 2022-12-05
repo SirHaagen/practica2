@@ -1,8 +1,10 @@
-import { NavDesktop } from "../utility/NavDesktop"
+import { NavDesktop } from "../utility/NavDesktop";
+import { NavMobile } from "../utility/NavMobile";
 
-export const NavBar= ()=>{
+export const NavBar = () => {
 
-  return(
-  <NavDesktop />
-  )
+  return (<>
+    <NavMobile />
+    <NavDesktop />
+  </>)
 }
