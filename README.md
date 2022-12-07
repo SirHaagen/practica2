@@ -1,6 +1,7 @@
 # React project: sidebar (desktop and responsive)
 
 ## I'm using React icons for the menu bar:
+
 *Installation:*
 **npm install react-icons --save**
 *Usage*

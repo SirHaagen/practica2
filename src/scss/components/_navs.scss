@@ -1,4 +1,8 @@
+@use '../mixins' as *;
+
 .main {
+
+  //! *******Responsive menu
 
   &__navMobile {
     width: 100%;
@@ -42,6 +46,9 @@
     opacity: 0;
     overflow: hidden;
 
+
+    //! *******Desktop menu
+
     @media screen and (min-width: 600px) {
       width: auto;
       height: 100vh;
@@ -60,8 +67,18 @@
           display: flex;
           align-items: center;
         }
-        li a>*{
+
+        li a>* {
           margin: 10px;
+        }
+
+        &-submenu1 {
+          height: 105px;
+          @include styleSub;
+        }
+
+        &-submenu1.hideMenu {
+          @include hideMenu;
         }
 
       }
@@ -69,7 +86,7 @@
 
   }
 
-  @media screen and (min-width: 600px) {
-    display: flex;
-  }
+  @media screen and (min-width: 600px) {    //Para que muestre vista del entorno en 2 columnas
+    display: flex;                          //1 columna para el menú y la otra para el contenido
+  }                                         //de la página
 }
