@@ -1,6 +1,6 @@
 
 import { Routes, Route, Link } from "react-router-dom";
-import { FiHome, FiSettings, FiPlusSquare, FiUnlock, FiArchive, FiStar, FiSearch, FiUser } from "react-icons/fi";
+import { FiHome, FiSettings, FiPlusSquare, FiUnlock, FiArchive, FiStar, FiSearch, FiUser, FiChevronDown, FiChevronUp } from "react-icons/fi";
 import { useRef, useState } from "react";
 
 import { Home } from "../components/Home";
@@ -27,13 +27,14 @@ export const NavDesktop = () => {
   }
 
   return (<>
+
     <nav className="main__navDesktop">
       <ul className="main__navDesktop--links">
         <li><Link to="/"><FiHome />Home</Link></li>
 
         <li>
-          <Link to="/Settings" ref={btnSubmenu1} onClick={handleBtn}><FiSettings />Settings</Link>
-          <ul className={`main__navDesktop--links-submenu1 ${display1? "hideMenu": ""}`}>
+          <Link to="/Settings" ref={btnSubmenu1} onClick={handleBtn}><FiSettings />Settings{display1 ? <FiChevronUp />:<FiChevronDown />}</Link>
+          <ul className={`main__navDesktop--links-submenu1 ${display1? "": "hideMenu"}`}>
             <li><Link to="/SetDisplay">· Display</Link></li>
             <li><Link to="/SetEditor">· Editor</Link></li>
             <li><Link to="/SetTheme">· Theme</Link></li>
@@ -49,6 +50,7 @@ export const NavDesktop = () => {
         <li><Link to="/Users"><FiUser />Users</Link></li>
       </ul>
     </nav>
+
     <Routes>
       <Route path="/" element={<Home />} />
 
@@ -65,5 +67,6 @@ export const NavDesktop = () => {
       <Route path="/Search" element={<Search />} />
       <Route path="/Users" element={<Users />} />
     </Routes>
+    
   </>)
 }

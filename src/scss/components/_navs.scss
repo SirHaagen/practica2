@@ -6,7 +6,6 @@
 
   &__navMobile {
     width: 100%;
-    padding: 10px;
     background-color: #a7a7a7;
     position: fixed;
     bottom: 0;
@@ -16,8 +15,9 @@
     &--links {
       display: flex;
       justify-content: space-between;
-
+      
       li {
+        padding: 10px;
         display: flex;
         text-decoration: none;
         align-items: center;
@@ -45,27 +45,30 @@
     height: 0;
     opacity: 0;
     overflow: hidden;
-
-
+    
+    
     //! *******Desktop menu
-
+    
     @media screen and (min-width: 600px) {
       width: auto;
       height: 100vh;
-      padding: 40px 10px;
       background-color: #a7a7a7;
       position: relative;
       opacity: 1;
       overflow: visible;
       transition: 0.5s linear;
-
+      padding: 40px 0;
+      
       &--links {
-
+        
         li a {
+          padding: 0 10px;
           text-decoration: none;
           color: #ffffff;
           display: flex;
           align-items: center;
+          transition: 0.2s linear;
+          @include linkHover;
         }
 
         li a>* {
@@ -75,6 +78,10 @@
         &-submenu1 {
           height: 105px;
           @include styleSub;
+
+          li a{
+            padding-left: 40px;
+          }
         }
 
         &-submenu1.hideMenu {

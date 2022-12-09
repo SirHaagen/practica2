@@ -1,12 +1,19 @@
-@mixin hideMenu {
+@mixin hideMenu {     //Hide styles for submenu links
   height: 0;
   overflow: hidden;
   opacity: 0;
+  transition: all 0.3s linear;
 }
 
-@mixin styleSub {
-  padding-left: 30px;
+@mixin styleSub {     //Show styles for submenu links
   overflow: visible;
   opacity: 1;
   transition: all 0.3s linear;
+}
+
+@mixin linkHover {    //Hover for links
+
+  &:hover {
+    background-color: #858484;
+  }
 }
