@@ -2,9 +2,9 @@
 
 ## I'm using React icons for the menu bar:
 
-*Installation:*
+-*Installation:*
 **npm install react-icons --save**
-*Usage*
+-*Usage*
 ```javascript
 import { FaBeer } from 'react-icons/fa';
 class Question extends React.Component {
