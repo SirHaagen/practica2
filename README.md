@@ -5,7 +5,8 @@
 
 1. *Installation:*
 **npm install react-icons --save**
-2. *Usage*
+
+2. *Usage*:
 ```javascript
 import { FaBeer } from 'react-icons/fa';
 class Question extends React.Component {
